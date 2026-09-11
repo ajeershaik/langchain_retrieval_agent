@@ -15,7 +15,7 @@ def open_browser():
 
 if __name__ == "__main__":
     print("=" * 60)
-    print("Sri Vasavi Engineering College - Campus Retrieval Agent")
+    print("retrieval-agent: Langchain Retrieval Agent")
     print("Serving UI & API on: http://127.0.0.1:8000")
     print("=" * 60)
     threading.Thread(target=open_browser, daemon=True).start()

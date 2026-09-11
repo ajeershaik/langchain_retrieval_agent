@@ -63,7 +63,7 @@ def run_agent(query: str) -> str:
 
 
 def main():
-    print("Campus Retrieval Agent")
+    print("LangChain Retrieval Agent")
     print("Type 'exit' to quit.\n")
 
     while True:

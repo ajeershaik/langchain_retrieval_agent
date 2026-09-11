@@ -10,6 +10,7 @@ import math
 import re
 import io
 import json
+import uvicorn
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 
@@ -622,6 +623,12 @@ if FRONTEND_DIST.exists():
             return FileResponse(file_path)
         return FileResponse(FRONTEND_DIST / "index.html")
 
+
 if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("backend_service:app", host="127.0.0.1", port=8000, reload=False)
+    port = int(os.environ.get("PORT", 8000))
+
+    uvicorn.run(
+        app,
+        host="0.0.0.0",
+        port=port
+    )
